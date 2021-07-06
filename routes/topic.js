@@ -4,6 +4,9 @@ var path = require('path');
 var sanitizeHtml = require('sanitize-html');
 var template = require('../lib/template.js');
 var fs = require('fs');
+var helmet = require('helmet');
+
+app.use(helment());
 
 router.get('/create', function(request, response){
     var title = 'WEB - create';
